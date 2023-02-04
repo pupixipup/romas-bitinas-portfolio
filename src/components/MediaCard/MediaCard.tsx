@@ -38,7 +38,6 @@ export default function MediaCard(props: MediaCardProps) {
           <Typography
             sx={{
               fontFamily: "Poppins",
-              color: "white",
             }}
             className={styles.date ?? ""}
             gutterBottom
@@ -50,7 +49,6 @@ export default function MediaCard(props: MediaCardProps) {
           <Typography
             sx={{
               fontFamily: "Poppins",
-              color: "white",
             }}
             gutterBottom
             variant="h5"
@@ -61,7 +59,6 @@ export default function MediaCard(props: MediaCardProps) {
           <Typography
             sx={{
               fontFamily: "Poppins",
-              color: "white",
             }}
             variant="body2"
             color="text.secondary"
