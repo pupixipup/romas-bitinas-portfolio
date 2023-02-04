@@ -43,7 +43,7 @@ const darkTheme = createTheme({
     ].join(","),
   },
 })
-
+const whiteText = { color: "White" }
 function ExperienceModal({ open, handleClose, experience }: IProps) {
   return (
     <Modal
@@ -53,21 +53,21 @@ function ExperienceModal({ open, handleClose, experience }: IProps) {
       aria-describedby="modal-modal-description"
     >
       <Box sx={style}>
-        <Typography variant="h6" component="h2">
+        <Typography style={whiteText} variant="h6" component="h2">
           {experience.company}
         </Typography>
-        <Typography sx={{ mt: 1 }} variant="h4" component="h2">
+        <Typography sx={{ mt: 1, color: "white" }} variant="h4" component="h2">
           {experience.position}
         </Typography>
         <Typography
-          sx={{ mt: 1 }}
+          sx={{ mt: 1, color: "white" }}
           className={styles.date}
           variant="h6"
           component="p"
         >
           {experience.startDate} - {experience.endDate}
         </Typography>
-        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+        <Typography id="modal-modal-description" sx={{ mt: 2, color: "white" }}>
           {experience.description}
         </Typography>
       </Box>
