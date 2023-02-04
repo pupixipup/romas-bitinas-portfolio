@@ -63,6 +63,14 @@
   min-height: 100vh;
 }
 
+@media (max-width:600px) {
+
+  .hero,
+  .aboutMe {
+    padding: 1em;
+  }
+}
+
 .text {
   color: black;
   margin-top: 20px;

@@ -40,9 +40,9 @@ function Projects() {
             >
               <>
                 <Image
+                  fill={true}
+                  style={{}}
                   ref={nodeRef}
-                  width="720"
-                  height="420"
                   alt={currentProject.title}
                   className={styles.image}
                   src={currentProject.imageUrl}

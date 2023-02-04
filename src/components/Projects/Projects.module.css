@@ -40,5 +40,22 @@
 
 .image {
   object-fit: cover;
+  position: relative !important;
   transition: 1s;
+  height: unset !important;
+}
+
+@media (max-width: 1125px) {
+  .projects {
+    flex-direction: column;
+    gap: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .project {
+    align-self: center;
+  }
+
+  .image {}
 }
