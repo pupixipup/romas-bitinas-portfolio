@@ -3,6 +3,7 @@ import { Inter } from "@next/font/google"
 import styles from "@/styles/Home.module.css"
 import Animated from "@/components/Animated"
 import Links from "@/components/Links"
+import ExperienceCards from "@/components/ExperienceCards"
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
             I am Romas. I am a full stack developer.
           </Animated>
           <Animated className={styles.title} element="h1">
-            My main stack is React, Node.js, TypeScript
+            My main stack is React, Node.js, TypeScript,
           </Animated>
           <Animated className={styles.title} element="h1">
             But I am eager to learn new things.
@@ -46,6 +47,14 @@ export default function Home() {
               Contacts
             </h1>
             <Links />
+          </Animated>
+        </section>
+        <section className={styles.hero}>
+          <Animated className={styles.title} element="h1">
+            Experince
+          </Animated>
+          <Animated>
+            <ExperienceCards className={styles.experiences} />
           </Animated>
         </section>
       </main>

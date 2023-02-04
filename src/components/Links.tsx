@@ -9,7 +9,7 @@ function Links() {
         <a
           target="_blank"
           rel="noreferrer"
-          className={styles.link}
+          className={styles.link ?? ""}
           key={link.label}
           href={link.url}
         >
