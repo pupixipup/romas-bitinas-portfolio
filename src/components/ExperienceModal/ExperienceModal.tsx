@@ -11,7 +11,7 @@ const style = {
   transform: "translate(-50%, -50%)",
   borderRadius: 2,
   width: 400,
-  bgcolor: "background.paper",
+  bgcolor: "#121212",
   border: "2px solid white",
   boxShadow: 24,
   p: 4,
@@ -46,34 +46,32 @@ const darkTheme = createTheme({
 
 function ExperienceModal({ open, handleClose, experience }: IProps) {
   return (
-    <ThemeProvider theme={darkTheme}>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Typography variant="h6" component="h2">
-            {experience.company}
-          </Typography>
-          <Typography sx={{ mt: 1 }} variant="h4" component="h2">
-            {experience.position}
-          </Typography>
-          <Typography
-            sx={{ mt: 1 }}
-            className={styles.date}
-            variant="h6"
-            component="p"
-          >
-            {experience.startDate} - {experience.endDate}
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            {experience.description}
-          </Typography>
-        </Box>
-      </Modal>
-    </ThemeProvider>
+    <Modal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <Box sx={style}>
+        <Typography variant="h6" component="h2">
+          {experience.company}
+        </Typography>
+        <Typography sx={{ mt: 1 }} variant="h4" component="h2">
+          {experience.position}
+        </Typography>
+        <Typography
+          sx={{ mt: 1 }}
+          className={styles.date}
+          variant="h6"
+          component="p"
+        >
+          {experience.startDate} - {experience.endDate}
+        </Typography>
+        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          {experience.description}
+        </Typography>
+      </Box>
+    </Modal>
   )
 }
 
