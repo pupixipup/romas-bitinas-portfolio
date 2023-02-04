@@ -1,51 +1,38 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react"
 import {
   AnimatePresence,
-  motion,
   useMotionValueEvent,
   useScroll,
+  useAnimation,
+  motion,
 } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 function Animated(props: any) {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end end"],
-  })
-  console.log(scrollYProgress)
-  const [visible, setVisible] = useState(false)
+  const [ref, inView] = useInView()
+  const controls = useAnimation()
+  const squareVariants = {
+    visible: { opacity: 1, transition: { duration: 1 } },
+    hidden: { opacity: 0 },
+  }
 
-  useLayoutEffect(() => {
-    console.log(scrollYProgress.get())
-    if (scrollYProgress.get() > 0.05) {
-      setVisible(true)
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible")
     }
-  }, [scrollYProgress])
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest > 0.1) {
-      setVisible(true)
-    }
-  })
-  const MotionComponent = motion(props.element ?? "div")
-
-  const copiedProps = { ...props }
-  delete copiedProps.element
+  }, [controls, inView])
+  // const MotionComponent = motion(props.element ?? "div")
 
   return (
-    <AnimatePresence>
-      {visible && (
-        <MotionComponent
-          ref={ref}
-          {...copiedProps}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: props.l ?? 1 }}
-        >
-          {props.children}
-        </MotionComponent>
-      )}
-    </AnimatePresence>
+    <motion.div
+      ref={ref}
+      {...props}
+      initial={{ opacity: 0 }}
+      animate={controls}
+      variants={squareVariants}
+    >
+      {props.children}
+    </motion.div>
   )
 }
 

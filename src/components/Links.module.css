@@ -1,0 +1,13 @@
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  color: #3545ee;
+}
+
+.link:hover {
+  opacity: .5;
+  transition: .3s;
+}

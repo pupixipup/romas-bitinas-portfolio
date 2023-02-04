@@ -17,6 +17,19 @@
   font-size: 3rem;
 }
 
+.alignRight {
+  text-align: right !important;
+  margin-left: auto;
+}
+
+.titleDark {
+  text-align: left;
+  align-self: start;
+  font-weight: 400;
+  font-size: 3rem;
+  color: black;
+}
+
 .description a {
   display: flex;
   justify-content: center;
@@ -45,9 +58,19 @@
   max-width: 100%;
 }
 
-.hero {
+.hero,
+.aboutMe {
   padding: 6em;
   height: 100vh;
+}
+
+.text {
+  color: black;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 2rem;
+  max-width: 620px;
+  margin-bottom: 2rem;
 }
 
 .aboutMe {
