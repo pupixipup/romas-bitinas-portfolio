@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.css"
 import Animated from "@/components/Animated"
 import Links from "@/components/Links"
 import ExperienceCards from "@/components/ExperienceCards"
+import Projects from "@/components/Projects/Projects"
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
@@ -57,7 +58,9 @@ export default function Home() {
             <ExperienceCards className={styles.experiences} />
           </Animated>
         </section>
-        <section className={styles.aboutMe}></section>
+        <section className={styles.aboutMe}>
+          <Projects />
+        </section>
       </main>
     </>
   )

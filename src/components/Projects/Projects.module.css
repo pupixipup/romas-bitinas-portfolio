@@ -1,0 +1,44 @@
+.title {
+  font-size: 2rem;
+  list-style: none;
+  color: #3545ee;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.title.active {
+  opacity: .5;
+  transition: .3s;
+}
+
+.list {
+  margin-top: 20px;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project {
+  max-width: 720px;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.stackItem {
+  color: black;
+  padding: 8px 16px;
+  border: 1px solid #3545ee;
+  border-radius: 4px;
+}
+
+.image {
+  object-fit: cover;
+  transition: 1s;
+}
