@@ -28,19 +28,19 @@ const darkTheme = createTheme({
     mode: "dark",
   },
   typography: {
-    fontFamily:  [
-      'Poppins',
-      '-apple-system',
-      'BlinkMacSystemFont',
+    fontFamily: [
+      "Poppins",
+      "-apple-system",
+      "BlinkMacSystemFont",
       '"Segoe UI"',
-      'Roboto',
+      "Roboto",
       '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
+      "Arial",
+      "sans-serif",
       '"Apple Color Emoji"',
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
-    ].join(','),
+    ].join(","),
   },
 })
 
@@ -78,5 +78,3 @@ function ExperienceModal({ open, handleClose, experience }: IProps) {
 }
 
 export default ExperienceModal
-
-// TODO: add mobile
