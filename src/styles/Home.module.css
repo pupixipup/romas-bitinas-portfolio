@@ -59,7 +59,7 @@
 .hero,
 .aboutMe {
   padding: 6em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .text {
@@ -78,7 +78,6 @@
 }
 
 .aboutMe {
-  height: 100vh;
   background: white;
 }
 

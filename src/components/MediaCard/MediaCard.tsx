@@ -61,7 +61,7 @@ export default function MediaCard(props: MediaCardProps) {
           </Button>
         </CardActions>
       </Card>
-      <ExperienceModal open={open} handleClose={() => setIsOpen(false)} />
+      <ExperienceModal experience={props.data} open={open} handleClose={() => setIsOpen(false)} />
     </>
   )
 }

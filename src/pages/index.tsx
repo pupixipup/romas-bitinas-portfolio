@@ -51,7 +51,7 @@ export default function Home() {
         </section>
         <section className={styles.hero}>
           <Animated className={styles.title} element="h1">
-            Experince
+            Experience
           </Animated>
           <Animated>
             <ExperienceCards className={styles.experiences} />

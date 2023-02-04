@@ -1,6 +1,8 @@
 import { Box, Modal, Typography } from "@mui/material"
 import React from "react"
 import { ThemeProvider, createTheme } from "@mui/material/styles"
+import experience from "@/data/experience"
+import styles from "./ExperienceModal.module.css"
 
 const style = {
   position: "absolute" as "absolute",
@@ -16,6 +18,7 @@ const style = {
 }
 
 interface IProps {
+  experience: typeof experience[0]
   open: boolean
   handleClose: () => void
 }
@@ -26,7 +29,7 @@ const darkTheme = createTheme({
   },
 })
 
-function ExperienceModal({ open, handleClose }: IProps) {
+function ExperienceModal({ open, handleClose, experience }: IProps) {
   return (
     <ThemeProvider theme={darkTheme}>
       <Modal
@@ -36,11 +39,22 @@ function ExperienceModal({ open, handleClose }: IProps) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+          <Typography variant="h6" component="h2">
+            {experience.company}
+          </Typography>
+          <Typography sx={{ mt: 1 }} variant="h4" component="h2">
+            {experience.position}
+          </Typography>
+          <Typography
+            sx={{ mt: 1 }}
+            className={styles.date}
+            variant="h6"
+            component="p"
+          >
+            {experience.startDate} - {experience.endDate}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            {experience.description}
           </Typography>
         </Box>
       </Modal>
