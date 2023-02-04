@@ -36,6 +36,9 @@ export default function MediaCard(props: MediaCardProps) {
         />
         <CardContent>
           <Typography
+            sx={{
+              fontFamily: "Poppins",
+            }}
             className={styles.date ?? ""}
             gutterBottom
             variant="caption"
@@ -43,15 +46,31 @@ export default function MediaCard(props: MediaCardProps) {
           >
             {props.data.startDate} - {props.data.endDate}
           </Typography>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography
+            sx={{
+              fontFamily: "Poppins",
+            }}
+            gutterBottom
+            variant="h5"
+            component="div"
+          >
             {props.data.position}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            sx={{
+              fontFamily: "Poppins",
+            }}
+            variant="body2"
+            color="text.secondary"
+          >
             {props.data.brief}
           </Typography>
         </CardContent>
         <CardActions>
           <Button
+            sx={{
+              fontFamily: "Poppins",
+            }}
             onClick={openModal}
             fullWidth={true}
             variant="outlined"
@@ -61,7 +80,11 @@ export default function MediaCard(props: MediaCardProps) {
           </Button>
         </CardActions>
       </Card>
-      <ExperienceModal experience={props.data} open={open} handleClose={() => setIsOpen(false)} />
+      <ExperienceModal
+        experience={props.data}
+        open={open}
+        handleClose={() => setIsOpen(false)}
+      />
     </>
   )
 }

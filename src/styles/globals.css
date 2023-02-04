@@ -38,6 +38,12 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+@media (max-width: 650px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
