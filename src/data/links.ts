@@ -14,5 +14,18 @@ const links = [
   {
     label: 'Codewars',
     url: 'https://www.codewars.com/users/pupixipup'
-  }]
+  },
+  {
+    label: 'rkbitinas@gmail.com',
+    url: 'mailto:rkbitinas@gmail.com'
+  },
+  {
+    label: 'Steam',
+    url: 'https://steamcommunity.com/id/romasthe1st/'
+  },
+  {
+    label: 'Instagram',
+    url: 'https://www.instagram.com/sanndreascitizen/'
+  }
+]
 export default links

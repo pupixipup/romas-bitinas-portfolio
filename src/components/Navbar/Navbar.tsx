@@ -22,12 +22,6 @@ function Navbar() {
     <Slide in={!trigger}>
       <AppBar position="sticky">
         <Toolbar variant="dense">
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          ></IconButton>
           <Link
             style={{ textAlign: "right", width: "100%" }}
             href={linkData.link}

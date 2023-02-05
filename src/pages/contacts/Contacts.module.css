@@ -1,0 +1,15 @@
+.contacts {
+  padding: 6em;
+  min-height: 100vh;
+}
+
+@media (max-width:600px) {
+  .contacts {
+    padding: 1em;
+  }
+}
+
+.skills {
+  justify-content: start;
+  max-width: 650px;
+}
