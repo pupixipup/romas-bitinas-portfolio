@@ -2,7 +2,7 @@ import Head from "next/head"
 import { Inter } from "@next/font/google"
 import styles from "@/styles/Home.module.css"
 import Animated from "@/components/Animated"
-import Links from "@/components/Links"
+import skills from "@/data/skills"
 import ExperienceCards from "@/components/ExperienceCards"
 import Projects from "@/components/Projects/Projects"
 const inter = Inter({ subsets: ["latin"] })
@@ -45,9 +45,15 @@ export default function Home() {
             element="div"
           >
             <h1 className={`${styles.titleDark} ${styles.alignRight}`}>
-              Contacts
+              Key Skills
             </h1>
-            <Links />
+            <div className={styles.skills}>
+              {skills.map((el) => (
+                <div className={styles.skill} key={el}>
+                  {el}
+                </div>
+              ))}
+            </div>
           </Animated>
         </section>
         <section className={styles.hero}>

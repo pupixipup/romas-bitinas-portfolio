@@ -50,6 +50,26 @@
   font-family: var(--font-mono);
 }
 
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.skill {
+  border: 1px solid #3545ee;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: .3s;
+}
+
+.skill:hover {
+  background-color: #3545ee;
+  color: white;
+  transition: .3s;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
